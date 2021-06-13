@@ -6,6 +6,29 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 import pyautogui
 
+name = input("What is your name?")
+
+#Assigns rank and name positions in the dropdown menu for the respective questions.
+if name == "yy":
+    rank_pos = 12
+    name_pos = 17
+
+elif name == "alvin":
+    rank_pos = 8
+    name_pos = 10
+
+elif name =="yan":
+    rank_pos = 12
+    name_pos = 16
+
+elif name == "julian":
+    rank_pos = 12
+    name_pos = 15
+
+elif name == "kareem":
+    rank_pos = 12
+    name_pos = 18
+
 day = datetime.datetime.now()
 
 #instantiates the webdriver object and sets up the window to be in incognito mode.
@@ -38,11 +61,11 @@ def dropdown_clicker(x):
 #Keying in the Rank and Name as well as temperature into the respective entries.
 rank_name[0].click()
 time.sleep(1)
-dropdown_clicker(12)
+dropdown_clicker(rank_pos)
 time.sleep(1)
 rank_name[14].click()
 time.sleep(1)
-dropdown_clicker(17)
+dropdown_clicker(name_pos)
 time.sleep(1)
 
 temperature[1].send_keys("36.5")
