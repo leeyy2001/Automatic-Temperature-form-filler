@@ -36,7 +36,7 @@ option = webdriver.ChromeOptions()
 option.add_argument("-incognito")
 
 #defines the browser and option
-browser = webdriver.Chrome(executable_path=r"D:\yylee\chromedriver.exe", options=option)
+browser = webdriver.Chrome(executable_path=r"link to the google form", options=option)
 
 #Accesses the website using the link we provided it.
 browser.get("https://docs.google.com/forms/d/e/1FAIpQLSdu2cOJxJtZjN-of4ycISSwyxw3o6DwO84CwKklpJJXu3QMUQ/viewform")
